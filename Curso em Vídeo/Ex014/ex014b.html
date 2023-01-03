@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia!</title>
+
+    <style>
+         body {
+            background: rgb(214, 183, 98);
+            color: white;
+            font: normal 18pt Arial;
+         }
+        h1#main {
+            font: bold 26pt Arial;
+            text-align: center;
+        }
+        p#horas {
+            color: black;
+            text-align: center;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+        div#branco {
+            background: white;
+            width: 600px;
+            height: 450px;
+            box-shadow: gray 3px 3px;
+            border-radius: 15px;
+            margin: auto;
+            display: block;
+        }
+        img#ima {
+            border-radius: 1800px;
+            margin: auto;
+            display: block;
+            width: 350px; 
+            height: 350px;
+            object-fit: cover;
+        }
+        p#fim {
+            text-align: center;
+            font: normal 15pt Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="main">Hora do Dia</h1>
+
+    <div id="branco">
+        <p id="horas">Agora são 9 horas</p>
+        <img id="ima" src="01.jpg">
+    </div>
+
+    <p id="fim">© CursoemVideo</p>
+
+    <script>
+        var hora = document.querySelector('p#horas')
+        var agora = new Date()
+        var agora = agora.getHours()
+        hora.innerHTML = `Agora são ${agora} horas!`
+
+        if (agora > 11 && agora < 19) {
+            var imc = document.querySelector('img#ima').src='02.jpg'
+            document.body.style.backgroundColor = '#E88E3C' 
+        } else if (agora > 18 && agora < 24) {
+            var imc = document.querySelector('img#ima').src='03.jpg'
+            document.body.style.backgroundColor = '#1B2856'
+        }
+
+    </script>
+</body>
+</html>

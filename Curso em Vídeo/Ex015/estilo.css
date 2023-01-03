@@ -1,0 +1,35 @@
+body {
+background: gray;
+font: normal 15pt Arial;
+}
+header {
+color: white;
+text-align: center;
+}
+section {
+background: white;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: rgba(0, 0, 0, 0.377) 3px 3px 5px;
+}
+div#msg {
+    text-align: center;
+    padding-bottom: 15px;
+}
+img#foto {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 600px;
+    margin: auto;
+    display: block;
+    padding: 15px;
+    margin-top: 10px;
+}
+footer {
+color: white;
+text-align: center;
+font-style: italic;
+}

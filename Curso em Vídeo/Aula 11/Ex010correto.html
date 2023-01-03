@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {
+            background: gray;
+            color: white;
+            font: Normal 18pt Arial;
+        }
+        input {
+            width: 45px;
+            height: 20px;
+        }
+        input#verificar {
+            width: 95px;
+        }
+        div#res {
+            margin-top: 25px;
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testador de Velocidade</h1>
+    Qual a velocidade: <input type="number" name="txtn1" id="txtn1"> km/h
+    <input type="button" value="Verificar" id="verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var n1 = window.document.querySelector('input#txtn1')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(n1.value)
+            res.innerHTML = `<p><strong>Sua velocidade atual é de ${vel}km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você excedeu a velocidade máxima da via em ${vel-60}km/h! <strong>CUIDADO!</strong></p>`
+            }else{
+                res.innerHTML += `<p>Você está abaixo da velocidade limite da via! <strong>PARABÉNS!!!</strong></p>`
+                res.innerHTML += `<p>Só tome cuidado, pois você está apenas a ${60-vel}km/h do limite! :)</p>`
+            }
+            res.innerHTML += '<p>Dirija sempre com segurança!</p>'
+        }
+    </script>
+</body>
+</html>

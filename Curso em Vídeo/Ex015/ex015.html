@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <style>
+        body {
+            background: gray;
+            font: normal 16pt Arial;
+        }
+        h1#tit {
+            font: bold 32pt Arial;
+            text-align: center;
+            color: white;
+        }
+        div#base {
+            background: White;
+            width: 600px;
+            height: auto;
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-bottom: 15px;
+            border-radius: 15px;
+            box-shadow: rgb(70, 70, 70) 3px 3px;
+            margin: auto;
+            display: block;
+        }
+        p#fim {
+            text-align: center;
+            font: normal 15pt Arial;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="tit">Verificador de Idade</h1>
+    <div id="base">
+        <p id="nascimento">Ano de Nascimento: <input type="number" name="ano" id="ano"></p>
+        <p id="sexo">Sexo: <input type="radio" name="sex" id="mas"> Masculino
+        <input type="radio" name="sex" id="fem"> Feminino</p>
+        <input id='verif' type="button" value="Verificar" onclick="veriicar()">
+
+        <p id="txtres"></p>
+        <p id="imgp"></p>
+    </div>
+    <p id="fim">© CursoemVideo</p>
+
+
+
+    <script>
+
+    </script>
+</body>
+</html>

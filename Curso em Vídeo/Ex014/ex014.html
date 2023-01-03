@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        h1{
+            color: white;
+            font: bold 26pt arial;
+            text-align: center;
+        }
+        body {
+            background-color: rgb(214, 173, 111);
+        }
+        div#branco {
+            background: white;
+            text-align: center;
+            width: 450px;
+            margin-left: 140px;
+            font: normal 16pt arial;
+            border-radius: 15px;
+        }
+        p#direitos {
+            font: normal 12pt arial;
+            text-align: center;
+        }
+        img#imgt {
+            border-radius: 380px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <div id="branco">
+        <p id="horas">Agora são 9 horas!</p>
+        <img id="imgt" src="file://D:\Mateus\Downloads\01.jpg" width="350" height="350">
+    </div>
+    <p id="direitos">©CursoemVídeo</p>
+    <div id="res"></div>
+    <script>
+        var agora = new Date()
+        var horas = agora.getHours()
+        var horas = horas.value
+        var res = window.document.querySelector('div#res')
+        var txth = window.document.querySelector('p#horas')
+        var imgt = window.document.querySelector('img#imgt')
+        if (horas > 11 && horas < 19) {
+            txth.innerHTML = `Agora são ${horas} horas!`
+            imgt = window.document.querySelector('img#imgt').src ="file://D:\Mateus\Downloads\02.jpg" alt ="after"
+            window.document.body.style.background            
+        } else if (horas > 18 && horas < 24) {
+            txth.innerHTML = `Agora são ${horas} horas!`
+            imgt = window.document.querySelector('img#imgt').src ="file://D:\Mateus\Downloads\03.jpg" alt ="night"
+        }
+    </script>
+</body>
+</html>
