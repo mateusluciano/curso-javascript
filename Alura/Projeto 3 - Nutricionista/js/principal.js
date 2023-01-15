@@ -40,21 +40,7 @@ for(c=0 ; c < pacientes.length ; c++) {
     }
 }
 
-function adicionar() {
-
-    var novatr = document.createElement('tr')
-    novatr.className = 'paciente'
-    var novonome = document.createElement('td')
-    novonome.className = 'info-nome'
-
-    novatr.appendChild(novonome)
-
-    var nomepct = document. querySelector('input.nome')
-    var nomepct = nomepct.textContent
-
-    novonome = nomepct
-    document.body.appendChild(novonome)
-
-
-
-}
+var btp = document.querySelector('#adicionar-paciente')
+btp.addEventListener('click', function(){
+    console.log(btp)
+})
