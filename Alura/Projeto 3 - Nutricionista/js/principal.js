@@ -39,8 +39,3 @@ for(c=0 ; c < pacientes.length ; c++) {
         tdImc.textContent = imc.toFixed(2);
     }
 }
-
-var btp = document.querySelector('#adicionar-paciente')
-btp.addEventListener('click', function(){
-    console.log(btp)
-})
