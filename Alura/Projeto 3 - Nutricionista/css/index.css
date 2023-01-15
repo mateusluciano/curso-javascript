@@ -97,7 +97,7 @@ label{
 }
 
 button{
-	padding: .5em 2em;
+	padding: 20px;
 	border: 0;
 	border-bottom: 3px solid;
 	font-size: 1.2em;
@@ -107,10 +107,9 @@ button{
 	color: #fff;
 	background-color:#0c8cd3;
 	border-color: #04324c;
-	width: 20%;
-    display: block;
+    display: flexbox;
     clear: both;
-    margin: 10px 0px;
+    margin: 10px 10px;
 
 }
 
