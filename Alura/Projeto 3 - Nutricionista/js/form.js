@@ -11,8 +11,8 @@ btp.addEventListener('click', function(event){
     var pacienteTr = montaTr(paciente)
 
     // Validando cliente
-    var erro = validaPaciente(paciente)
-    if (erro.length > 0) {
+    var erros = validaPaciente(paciente)
+    if (erros.length > 0) {
         var mensagemErro = document.querySelector('#msg-erro')
         mensagemErro.textContent = erro
         return
@@ -60,9 +60,15 @@ function montaTd(dado, classe) {
 }
 
 function validaPaciente (paciente) {
+    var erros = []
+
     if (validaPeso(paciente.peso)) {
-        return ''
-    } else {
-        return 'Peso inválido'
+        return erros.push('Peso inválido')
     }
+
+    if (validaAltura(paciente.altura)) {
+        return erros.push('Altura inválida')
+    }
+
+    return erros
 }
