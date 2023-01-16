@@ -10,6 +10,14 @@ btp.addEventListener('click', function(event){
     // Criação da TR e das TDs
     var pacienteTr = montaTr(paciente)
 
+    // Validando cliente
+    var erro = validaPaciente(paciente)
+    if (erro.length > 0) {
+        var mensagemErro = document.querySelector('#msg-erro')
+        mensagemErro.textContent = erro
+        return
+    }
+
     // Adicionando o paciente na tabela
     var tabela = document.querySelector('#tabela-pacientes')
     tabela.appendChild(pacienteTr)
@@ -49,4 +57,12 @@ function montaTd(dado, classe) {
     td.classList.add(classe)
 
     return td
+}
+
+function validaPaciente (paciente) {
+    if (validaPeso(paciente.peso)) {
+        return ''
+    } else {
+        return 'Peso inválido'
+    }
 }
