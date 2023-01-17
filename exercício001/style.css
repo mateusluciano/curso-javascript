@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.display {
+    display: block;
+    margin: 25px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 20px;
+}
+h1 {
+    font: normal bold 3em Arial;
+    color: rgb(48, 48, 48);
+    text-align: center;
+}
+
+.nota-aluno {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: rgb(216, 216, 216);
+    text-align: center;
+    font: normal bold 1.2em Arial
+}
+#adicionar {
+    display: block;
+    margin: auto;
+    width: 140px;
+    padding: 05px 0px 05px 0px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: grey;
+    text-align: center;
+    font: normal bold 0.8em Arial;
+    text-transform: uppercase;
+}
