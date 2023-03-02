@@ -37,7 +37,7 @@ for(c=0 ; c < pacientes.length ; c++) {
 }
 
 function validaPeso (peso) {
-    if (peso > 0 && peso < 1000) {
+    if (peso > 0 && peso < 600) {
         return true;
     } else {
         return false
